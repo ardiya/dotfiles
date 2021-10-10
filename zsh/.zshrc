@@ -68,6 +68,9 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# To customize each devices, especially one that suppose to be private
+[[ ! -f ~/.$(hostname).zsh ]] || source ~/.$(hostname).zsh
+
 # Run DT's colorscript if it exist
 if [ -x "$(command -v colorscript random )" ]; then
   colorscript random
