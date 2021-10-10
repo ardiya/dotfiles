@@ -58,3 +58,5 @@ fi
 if ! command -v colorscript random &> /dev/null; then
   colorscript random
 fi
+
+alias kitty_ssh="kitty +kitten ssh"
