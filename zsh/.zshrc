@@ -58,11 +58,14 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 # Use exa as more superior ls
 # if it's available
 if [ -x "$(command -v exa)" ]; then
-  alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-  alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-  alias ll='exa -l --color=always --group-directories-first'  # long format
-  alias lt='exa -aT --color=always --group-directories-first' # tree listing
-  alias l.='exa -a | egrep "^\."'
+  alias ls='exa --color=always --group-directories-first'
+  alias ll='ls -l --git'        # Long format, git status
+  alias l='ll -a'               # Long format, all files
+  alias lr='ll -T'              # Long format, recursive as a tree
+  alias lx='ll -sextension'     # Long format, sort by extension
+  alias lk='ll -ssize'          # Long format, largest file size last
+  alias lt='ll -smodified'      # Long format, newest modification time last
+  alias lc='ll -schanged'       # Long format, newest status change (ctime) last
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
