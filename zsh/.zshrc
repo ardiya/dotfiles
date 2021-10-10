@@ -34,6 +34,9 @@ export EDITOR="nvim"
 # Use ccache whenever possible to make recompilation faster
 [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
 
+# Add cargo bin to path if exist
+[[ ! -d ~/.cargo/bin ]] || export PATH="${HOME}/.cargo/bin":${PATH}
+
 # to make Zsh terminal not have shared history
 # just like how it works in bash
 setopt no_share_history
