@@ -40,6 +40,11 @@ fi
 # Use ccache whenever possible to make recompilation faster
 [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
 
+# Add .local if it exist
+[[ ! -d ~/.local/bin ]] || export PATH="~/.local/bin":${PATH}
+[[ ! -d ~/.local/lib ]] || export LD_LIBRARY_PATH=~/.local/lib:${LD_LIBRARY_PATH}
+[[ ! -d ~/.local/lib/pkgconfig ]] || export PKG_CONFIG_PATH=~/.local/lib/pkgconfig:${PKG_CONFIG_PATH}
+
 # Add cargo bin to path if exist
 [[ ! -d ~/.cargo/bin ]] || export PATH="${HOME}/.cargo/bin":${PATH}
 
