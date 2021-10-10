@@ -29,7 +29,13 @@ else
   export VISUAL="code"
   alias v="nvim"
 fi
-export EDITOR="nvim"
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR=vim
+else
+  export EDITOR=nvim
+fi
 
 # Use ccache whenever possible to make recompilation faster
 [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
