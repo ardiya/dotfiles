@@ -20,7 +20,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Setup default program to edit stuff
-if ! command -v colorscript random &> /dev/null; then
+if [ -x "$(command -v neovide)" ]; then
   # If neovide exist
   export VISUAL="neovide --multigrid"
   export WINIT_UNIX_BACKEND=x11
@@ -43,7 +43,7 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 # Use exa as more superior ls
 # if it's available
-if ! command -v colorscript random &> /dev/null; then
+if [ -x "$(command -v exa)" ]; then
   alias ls='exa -al --color=always --group-directories-first' # my preferred listing
   alias la='exa -a --color=always --group-directories-first'  # all files and dirs
   alias ll='exa -l --color=always --group-directories-first'  # long format
@@ -55,7 +55,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Run DT's colorscript if it exist
-if ! command -v colorscript random &> /dev/null; then
+if [ -x "$(command -v colorscript random )" ]; then
   colorscript random
 fi
 
