@@ -8,6 +8,7 @@ PKGS=(
     zsh
     tmux
     fonts
+    kitty
 )
 
 pushd ${SCRIPT_DIR} &> /dev/null
