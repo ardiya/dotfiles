@@ -21,7 +21,9 @@ sudo pacman -Syu
 PKGS=(
     ibus-libpinyin # I'm polyglot :)
     ibus-mozc      # I'm polyglot :)
+    inetutils
     neovim
+    net-tools
     stow
     sublime-merge
     sublime-text-4
