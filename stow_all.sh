@@ -9,6 +9,7 @@ PKGS=(
     tmux
     fonts
     kitty
+    nvim
 )
 
 pushd ${SCRIPT_DIR} &> /dev/null
