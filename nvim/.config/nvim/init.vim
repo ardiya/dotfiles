@@ -75,6 +75,11 @@ set noswapfile                  " No swap
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set mouse=a                     " Enable mouse support
 
+" insert four spaces instead of a tab character.
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " allows cursor change in tmux mode
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -102,3 +107,5 @@ let g:neovide_transparency=0.8
 let g:neovide_cursor_vfx_mode="sonicboom"
 let g:neovide_cursor_vfx_particle_lifetime=1.5
 let g:neovide_cursor_trail_length=1.0
+
+let g:ycm_clangd_binary_path = getenv('HOME') . '/Software/clang+llvm-13.0.0/bin/clangd'
