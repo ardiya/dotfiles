@@ -53,7 +53,7 @@ fi
 setopt no_share_history
 
 # Ignore following commands in history so it doesn't get full so fast
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|man|man *|[n,]vi[m,]|[n,]vi[m,] *)"
 
 # Use exa as more superior ls
 # if it's available
