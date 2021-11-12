@@ -23,7 +23,7 @@ PKGS=(
     exa
     fd
     ibus-libpinyin # I'm polyglot :)
-    ibus-mozc      # I'm polyglot :)
+    ibus-mozc-ut   # I'm polyglot :)
     inetutils
     neovim
     net-tools
