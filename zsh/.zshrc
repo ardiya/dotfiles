@@ -68,6 +68,12 @@ if [ -x "$(command -v exa)" ]; then
   alias lc='ll -schanged'       # Long format, newest status change (ctime) last
 fi
 
+# Use bat as more superior cat if it's available
+if [ -x "$(command -v bat)" ]; then
+  alias cat='bat'
+fi
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

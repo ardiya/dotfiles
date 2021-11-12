@@ -19,12 +19,18 @@ sudo () {
 sudo pacman -Syu
 
 PKGS=(
+    bat
+    exa
+    fd
     ibus-libpinyin # I'm polyglot :)
     ibus-mozc      # I'm polyglot :)
     inetutils
     neovim
     net-tools
+    procs
+    ripgrep
     stow
+    tldr
     ulauncher
     vim
     visual-studio-code-bin
