@@ -25,8 +25,6 @@ PKGS=(
     neovim
     net-tools
     stow
-    sublime-merge
-    sublime-text-4
     ulauncher
     vim
     visual-studio-code-bin
