@@ -1,0 +1,114 @@
+* {
+    border: none;
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Google Sans", "Font Awesome 5 Free";
+    font-size: 14px;
+    min-height: 0;
+}
+
+.modules-center, .modules-left, .modules-right {
+    background-color: #282a36;
+    border-radius: 90px;
+    padding: 0px 20px;
+}
+
+window#waybar {
+    background-color:transparent;
+    border-bottom: 3px solid transparent;
+    color: #f8f8f2;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+tooltip {
+  background: rgba(40, 42, 54, 0.9);
+  border-radius: 24px;
+  border: 1px solid rgb(68, 71, 90);
+}
+
+tooltip label {
+  color: #f8f8f2;
+}
+
+#backlight,
+#battery,
+#bat1,
+#clock,
+#cpu,
+#custom-pacman,
+#disk,
+#idle_inhibitor,
+#language,
+#memory,
+#mode,
+#mpd,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding: 0 2px;
+    margin: 0 4px;
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0px 4px;
+    border-radius: 2px;
+    background: #44475a;
+    color: #f8f8f2;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: rgb(98, 114, 164);
+    border-bottom: 3px solid #f8f8f2;
+}
+
+#workspaces button:hover {
+    background-color: rgba(189, 147, 249, 0.5);
+    color: #f8f8f2;
+}
+
+/** Customize all modules color */
+#cpu {
+    color: rgb(139, 233, 253);
+}
+
+#memory {
+    color: rgb(80, 250, 123);
+}
+
+#temperature {
+    color: rgb(255, 85, 85);
+}
+
+#pulseaudio {
+    color: rgb(189, 147, 249);
+}
+
+#backlight {
+    color: rgb(241, 250, 140);
+}
+
+#network {
+    color: rgb(255, 184, 108);
+}
+
+#battery, #bat1 {
+    color: rgb(255, 121, 198);
+}
+
+/* remove margin on bat0 and bat1 */
+#battery {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+#bat1 {
+    margin-left: 0px;
+    padding-left: 0px;
+}
