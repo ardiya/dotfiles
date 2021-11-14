@@ -70,7 +70,7 @@ fi
 
 # Use bat as more superior cat if it's available
 if [ -x "$(command -v bat)" ]; then
-  alias cat='bat'
+  alias cat='bat --theme=Dracula'
 fi
 
 
