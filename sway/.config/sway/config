@@ -37,7 +37,7 @@ set $menu exec $term --class=launcher -e env sway-launcher-desktop
 output "*" bg ~/.wallpaper/Eq9yN0x.jpeg fill
 # Get the names of outputs by running: swaymsg -t get_outputs
 output "Dell Inc. DELL S2409W C244D93N3T6U" {
-    position 0 0
+    position 0 250
     resolution 1920x1080
     transform 90
 }
@@ -45,7 +45,7 @@ output "Acer Technologies KA270H T66SJ0018556" {
     position 1080 0
     resolution 1920x1080
 }
-output e-DP-1 {
+output eDP-1 {
     position 1080 1080
     resolution 1920x1080
 }
