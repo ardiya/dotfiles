@@ -19,6 +19,7 @@ set $gnome-schema org.gnome.desktop.interface
 exec_always {
     gsettings set $gnome-schema gtk-theme "Dracula"
     gsettings set $gnome-schema icon-theme "Tela-purple-dark"
+    gsettings set $gnome-schema cursor-theme "Adwaita"
     gsettings set $gnome-schema font-name "Google Sans"
 }
 
