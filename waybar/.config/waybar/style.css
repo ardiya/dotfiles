@@ -3,15 +3,15 @@
     border-radius: 0;
     margin: 0px;
     padding: 0px;
-    font-family: "Google Sans", "Font Awesome 5 Free";
-    font-size: 14px;
+    font-family: "FantasqueSansMono Nerd Font Mono";
+    font-size: medium;
     min-height: 0;
 }
 
 .modules-center, .modules-left, .modules-right {
-    background-color: #282a36;
-    border-radius: 90px;
-    padding: 0px 20px;
+    background-color: rgba(40, 42, 54, 0.8);
+    border-radius: 20px;
+    padding: 0px 10px;
 }
 
 window#waybar {
@@ -98,17 +98,6 @@ tooltip label {
     color: rgb(255, 184, 108);
 }
 
-#battery, #bat1 {
+#bat0, #bat1 {
     color: rgb(255, 121, 198);
-}
-
-/* remove margin on bat0 and bat1 */
-#battery {
-    margin-right: 0px;
-    padding-right: 0px;
-}
-
-#bat1 {
-    margin-left: 0px;
-    padding-left: 0px;
 }
