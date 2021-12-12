@@ -18,7 +18,7 @@ Plug 'tabnine/YouCompleteMe'
 Plug 'kgreenek/vim-ros-ycm'
 
 " "{{ Themes }}
-Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 " "{{ Tim Pope Plugins }}
 Plug 'tpope/vim-fugitive'
@@ -35,19 +35,15 @@ Plug 'junegunn/vim-emoji'                          " Vim needs emojis!
 call plug#end()
 
 " "{{ Extra Plugin Settings }}
-colorscheme nord
-let g:nord_cursor_line_number_background = 1
-let g:nord_uniform_diff_background = 1
-let g:nord_bold = 1
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
+syntax on
+set cursorline
+colorscheme onehalfdark
 let g:rainbow_active = 1
 if !has('gui_running')
   set t_Co=256
 endif
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'onehalfdark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
