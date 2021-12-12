@@ -23,7 +23,7 @@ PKGS=(
     exa
     fd
     ibus-libpinyin # I'm polyglot :)
-    ibus-mozc-ut   # I'm polyglot :)
+    ibus-anthy     # I'm polyglot :)
     inetutils
     neovim
     net-tools
@@ -31,7 +31,6 @@ PKGS=(
     ripgrep
     stow
     tldr
-    # ulauncher
     vim
     visual-studio-code-bin
     vlc
