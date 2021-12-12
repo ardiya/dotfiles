@@ -31,7 +31,7 @@ PKGS=(
     ripgrep
     stow
     tldr
-    ulauncher
+    # ulauncher
     vim
     visual-studio-code-bin
     vlc
