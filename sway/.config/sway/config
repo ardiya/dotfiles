@@ -47,6 +47,7 @@ output "Acer Technologies KA270H T66SJ0018556" {
     resolution 1920x1080
 }
 output eDP-1 {
+    scale 1.1
     position 1080 1080
     resolution 1920x1080
 }
@@ -188,7 +189,16 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86Search exec bemenu-run
+bindsym XF86Search $menu
+
+# Add change keyboard language
+bindsym $mod+i mode "j: japanese; c: chinese; esc: english"
+mode "j: japanese; c: chinese; esc: english" {
+    bindsym j exec fcitx5-remote -s mozc; exec fcitx5-remote -o; mode "default"
+    bindsym c exec fcitx5-remote -s pinyin; exec fcitx5-remote -o; mode "default"
+    bindsym Return exec fcitx5-remote -c; mode "default"
+    bindsym Escape exec fcitx5-remote -c; mode "default"
+}
 
 # Move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -219,6 +229,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+exec nm-applet --indicator
 exec waybar
+exec --no-startup-id fcitx5 -d
 
 include /etc/sway/config.d/*
