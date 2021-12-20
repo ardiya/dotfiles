@@ -9,6 +9,7 @@ PKGS=(
     tmux
     fonts
     kitty
+    vim
     nvim
 )
 
