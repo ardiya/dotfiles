@@ -53,7 +53,7 @@ fi
 setopt no_share_history
 
 # Ignore following commands in history so it doesn't get full so fast
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|man|man *|[n,]vi[m,]|[n,]vi[m,] *)"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|man|man *|[n,]vi[m,]|[n,]vi[m,] *)"
 
 # Use exa as more superior ls
 # if it's available
@@ -86,3 +86,8 @@ if [ -x "$(command -v colorscript random )" ]; then
 fi
 
 alias kitty_ssh="kitty +kitten ssh"
+
+# alias to proper clear in tmux
+if [[ $TMUX ]]; then
+  alias clear='clear && tmux clear-history'
+fi
