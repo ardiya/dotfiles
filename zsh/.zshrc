@@ -33,6 +33,9 @@ alias v="nvim"
 # Use ccache whenever possible to make recompilation faster
 [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
 
+# Use distcc whenever possible
+[[ ! -d /usr/lib/distcc ]] || export PATH="/usr/lib/distcc/bin":${PATH}
+
 # Add .local if it exist
 [[ ! -d ~/.local/bin ]] || export PATH="~/.local/bin":${PATH}
 [[ ! -d ~/.local/lib ]] || export LD_LIBRARY_PATH=~/.local/lib:${LD_LIBRARY_PATH}
