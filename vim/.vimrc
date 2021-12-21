@@ -21,6 +21,7 @@ call plug#end()
 let g:rainbow_active = 1
 let g:airline_theme='tomorrow'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
 
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
