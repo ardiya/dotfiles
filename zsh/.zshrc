@@ -91,3 +91,6 @@ alias kitty_ssh="kitty +kitten ssh"
 if [[ $TMUX ]]; then
   alias clear='clear && tmux clear-history'
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+[[ ! -d ~/.rvm/bin ]] || export PATH="$PATH:$HOME/.rvm/bin"
