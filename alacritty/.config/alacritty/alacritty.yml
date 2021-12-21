@@ -10,21 +10,21 @@ scrolling:
   history: 50000
 font:
   normal:
-    family: FantasqueSansMono Nerd Font Mono
+    family: Delugia Mono
     style: Regular
   bold:
-    family: FantasqueSansMono Nerd Font Mono
+    family: Delugia Mono
     style: Bold
   italic:
-    family: FantasqueSansMono Nerd Font Mono
+    family: Delugia Mono
     style: Italic
   bold_italic:
-    family: FantasqueSansMono Nerd Font Mono
+    family: Delugia Mono
     style: Bold Italic
   size: 14.0
   offset:
     x: 0
-    y: 0
+    y: 3
 schemes:
   TomorrowNight: &TomorrowNight
     primary:
