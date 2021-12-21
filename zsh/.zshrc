@@ -19,16 +19,6 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-# Setup default program to edit stuff
-if [ -x "$(command -v neovide)" ]; then
-  # If neovide exist
-  export VISUAL="neovide --multigrid"
-  export WINIT_UNIX_BACKEND=x11
-  alias v="neovide --multigrid"
-else
-  export VISUAL="code"
-  alias v="nvim"
-fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -36,6 +26,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR=nvim
 fi
+# Setup default program to edit
+export VISUAL="code"
+alias v="nvim"
 
 # Use ccache whenever possible to make recompilation faster
 [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
