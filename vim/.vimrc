@@ -6,7 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    Plug 'chriskempson/base16-vim'
     Plug 'luochen1990/rainbow'
     Plug 'preservim/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -18,10 +18,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
+let base16colorspace=256
+colorscheme base16-tomorrow
 let g:rainbow_active = 1
-let g:airline_theme='tomorrow'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tmuxline#enabled = 0
 
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
