@@ -7,7 +7,11 @@ fi
 
 # Setup oh-my-zsh
 export ZSH="${HOME}/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+if [ "$TERM" = "linux" ] || [ ! -d ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k ]; then
+  ZSH_THEME="flazz"
+else
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+fi
 plugins=(
   archlinux
   autojump
