@@ -85,6 +85,13 @@ if [ -x "$(command -v colorscript random )" ]; then
   colorscript random
 fi
 
+# Automatically generate compile commands on catkin workspace root, useful for clangd
+catkin_compile_commands(){( set -e
+  curr_ws=$(catkin locate)
+  jq -s 'map(.[])' ${curr_ws}/**/compile_commands.json > ${curr_ws}/compile_commands.json
+  echo "${curr_ws}/compile_commands.json created"
+)}
+
 alias kitty_ssh="kitty +kitten ssh"
 
 # alias to proper clear in tmux
