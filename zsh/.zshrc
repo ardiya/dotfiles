@@ -34,11 +34,16 @@ fi
 export VISUAL="code"
 alias v="nvim"
 
-# Use ccache whenever possible to make recompilation faster
-[[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
+. /etc/os-release
+case "$ID" in
+  # If it's Ubuntu Linux machine
+  ubuntu)
+    # Use ccache whenever possible to make recompilation faster
+    [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
 
-# Use distcc whenever possible
-[[ ! -d /usr/lib/distcc ]] || export PATH="/usr/lib/distcc/bin":${PATH}
+    # Use distcc whenever possible
+    [[ ! -d /usr/lib/distcc ]] || export PATH="/usr/lib/distcc/bin":${PATH}
+esac
 
 # Add .local if it exist
 [[ ! -d ~/.local/bin ]] || export PATH="~/.local/bin":${PATH}
