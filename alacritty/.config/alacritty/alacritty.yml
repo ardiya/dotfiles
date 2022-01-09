@@ -67,11 +67,8 @@ cursor:
     blinking: Always
 live_config_reload: true
 shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+  program: tmux
+
 mouse:
   hide_when_typing: false
 key_bindings:
