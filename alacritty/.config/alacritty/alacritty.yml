@@ -66,8 +66,5 @@ cursor:
     shape: Underline
     blinking: Always
 live_config_reload: true
-shell:
-  program: tmux
-
 mouse:
   hide_when_typing: false
