@@ -58,8 +58,40 @@ schemes:
       - { index: 19, color: '0x373b41' }
       - { index: 20, color: '0xb4b7b4' }
       - { index: 21, color: '0xe0e0e0' }
+  # Colors (Materia Dark) https://gist.github.com/BobbyWibowo/9b636c02c06b6f1a1181b0f5096b3928
+  materia-dark: &materia-dark
+    primary:
+      background: '0x181818'
+      foreground: '0xeff0f1'
+    normal:
+      black:   '0x181818'
+      red:     '0xe14245'
+      green:   '0x55ba79'
+      yellow:  '0xf67400'
+      blue:    '0x4285f4'
+      magenta: '0x9b59b6'
+      cyan:    '0x1abc9c'
+      white:   '0xeff0f1'
+    bright:
+      black:   '0x7f8c8d'
+      red:     '0xc0392b'
+      green:   '0x00c853'
+      yellow:  '0xfdbc4b'
+      blue:    '0x6aa6f4'
+      magenta: '0x8e44ad'
+      cyan:    '0x16a085'
+      white:   '0xfcfcfc'
+    dim:
+      black:   '0x181818'
+      red:     '0x783228'
+      green:   '0x149459'
+      yellow:  '0xb65619'
+      blue:    '0x345284'
+      magenta: '0x614a73'
+      cyan:    '0x186c60'
+      white:   '0x63686d'
 draw_bold_text_with_bright_colors: true
-colors: *base16-tommorow-night-256
+colors: *materia-dark
 background_opacity: 0.95
 cursor:
   style:

@@ -17,6 +17,7 @@ sudo () {
 
 PKGS=(
     zsh
+    materia-gtk-theme
     neovim
 )
 
