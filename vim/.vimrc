@@ -42,6 +42,7 @@ set smartcase
 
 set expandtab smarttab
 set tabstop=4 shiftwidth=4
+set scrolloff=4
 set autoindent smartindent cindent
 
 " Reselect visual selection after indenting
