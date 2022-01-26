@@ -6,6 +6,7 @@ window:
     x: 1
     y: 1
   dynamic_padding: true
+  decorations: None
 tabspaces: 4
 scrolling:
   history: 50000
