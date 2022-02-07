@@ -16,6 +16,7 @@ plugins=(
   archlinux
   autojump
   fzf
+  history
   ripgrep
   git
   systemd
