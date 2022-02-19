@@ -22,6 +22,7 @@ PKGS=(
     bat
     exa
     fd
+    foliate
     ibus-libpinyin # I'm polyglot :)
     ibus-anthy     # I'm polyglot :)
     inetutils
