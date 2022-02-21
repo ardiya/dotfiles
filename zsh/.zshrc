@@ -99,6 +99,9 @@ catkin_compile_commands(){( set -e
 )}
 
 alias kitty_ssh="kitty +kitten ssh"
+# Automatically source current ROS workspace
+alias source_devel='source $(catkin locate)/devel/setup.zsh'
+alias source_install='source $(catkin locate)/install/setup.zsh'
 
 # alias to proper clear in tmux
 if [[ $TMUX ]]; then
