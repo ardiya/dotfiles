@@ -47,9 +47,9 @@ case "$ID" in
 esac
 
 # Add .local if it exist
-[[ ! -d ~/.local/bin ]] || export PATH="~/.local/bin":${PATH}
-[[ ! -d ~/.local/lib ]] || export LD_LIBRARY_PATH=~/.local/lib:${LD_LIBRARY_PATH}
-[[ ! -d ~/.local/lib/pkgconfig ]] || export PKG_CONFIG_PATH=~/.local/lib/pkgconfig:${PKG_CONFIG_PATH}
+[[ ! -d ${HOME}/.local/bin ]] || export PATH="${HOME}/.local/bin":${PATH}
+[[ ! -d ${HOME}/.local/lib ]] || export LD_LIBRARY_PATH=${HOME}/.local/lib:${LD_LIBRARY_PATH}
+[[ ! -d ${HOME}/.local/lib/pkgconfig ]] || export PKG_CONFIG_PATH=${HOME}/.local/lib/pkgconfig:${PKG_CONFIG_PATH}
 
 # Add cargo bin to path if exist
 [[ ! -d ~/.cargo/bin ]] || export PATH="${HOME}/.cargo/bin":${PATH}
