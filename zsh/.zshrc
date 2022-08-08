@@ -110,3 +110,6 @@ fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ ! -d ~/.rvm/bin ]] || export PATH="$PATH:$HOME/.rvm/bin"
+
+# https://code.visualstudio.com/docs/terminal/shell-integration#_manual-installation
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
