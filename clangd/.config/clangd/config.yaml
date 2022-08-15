@@ -1,0 +1,12 @@
+# Note: add --enable--config in the `~/.config/Code/User/settings.json`'s' `clangd.arguments`, for example:
+#{
+#  "clangd.arguments": [..., "--enable-config"]
+#}
+CompileFlags:
+  Add: [-Wall, -Wextra, -Wshadow, -Wnon-virtual-dtor, -Wold-style-cast, -Wcast-align, -Woverloaded-virtual, -Wpedantic, -Wconversion, -Wsign-conversion, -Wnull-dereference, -Wdouble-promotion, -Wformat=2]
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add: modernize*
+Hover:
+  ShowAKA: Yes

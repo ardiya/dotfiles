@@ -6,6 +6,7 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 PKGS=(
     aria2
+    clangd
     zsh
     tmux
     fonts
