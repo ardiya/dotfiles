@@ -32,7 +32,7 @@ else
   export EDITOR=nvim
 fi
 # Setup default program to edit
-export VISUAL="code"
+export VISUAL="code --wait"
 alias v="nvim"
 
 . /etc/os-release
