@@ -1,3 +1,4 @@
+
 # Note: add --enable--config in the `~/.config/Code/User/settings.json`'s' `clangd.arguments`, for example:
 #{
 #  "clangd.arguments": [..., "--enable-config"]
@@ -7,6 +8,7 @@ CompileFlags:
 Diagnostics:
   UnusedIncludes: Strict
   ClangTidy:
-    Add: modernize*
+    Add: [performance*, modernize*, readability*]
+    Remove: [modernize-use-trailing-return-type]
 Hover:
   ShowAKA: Yes
