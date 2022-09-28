@@ -84,6 +84,11 @@ if [ -x "$(command -v bat)" ]; then
   alias cat='bat --theme=Dracula'
 fi
 
+# Use difft as more superior diff if it's available
+if [ -x "$(command -v difft)" ]; then
+  export GIT_EXTERNAL_DIFF=difft
+fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
