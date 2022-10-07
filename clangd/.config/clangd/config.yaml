@@ -8,7 +8,19 @@ CompileFlags:
 Diagnostics:
   UnusedIncludes: Strict
   ClangTidy:
-    Add: [performance*, modernize*, readability*]
-    Remove: [modernize-use-trailing-return-type]
+    Add: [performance*, modernize*, readability*, bugprone*, clang-analyzer*, cppcoreguidelines*, google*, hicpp*, misc*]
+    Remove:
+      - cppcoreguidelines-avoid-magic-numbers
+      - cppcoreguidelines-init-variables
+      - cppcoreguidelines-non-private-member-variables-in-classes
+      - misc-non-private-member-variables-in-classes
+      - readability-convert-member-functions-to-static
+      - readability-identifier-length
+      - readability-magic-numbers
+      - readability-redundant-access-specifiers
 Hover:
   ShowAKA: Yes
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
