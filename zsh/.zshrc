@@ -68,8 +68,8 @@ export HISTORY_IGNORE="(ls|ll|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|m
 
 # Use exa as more superior ls
 # if it's available
-if [ -x "$(command -v exa)" ]; then
-  alias ls='exa --color=always --group-directories-first'
+if [ -x "$(command -v eza)" ]; then
+  alias ls='eza --color=always --group-directories-first'
   alias ll='ls -l --git'        # Long format, git status
   alias l='ll -a'               # Long format, all files
   alias lr='ll -T'              # Long format, recursive as a tree
