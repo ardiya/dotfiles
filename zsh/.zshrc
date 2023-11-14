@@ -51,6 +51,9 @@ esac
 [[ ! -d ${HOME}/.local/lib ]] || export LD_LIBRARY_PATH=${HOME}/.local/lib:${LD_LIBRARY_PATH}
 [[ ! -d ${HOME}/.local/lib/pkgconfig ]] || export PKG_CONFIG_PATH=${HOME}/.local/lib/pkgconfig:${PKG_CONFIG_PATH}
 
+# Add snap/bin if exist
+[[ ! -d /snap/bin ]] || export PATH="/snap/bin":${PATH}
+
 # Add cuda {bin,lib,lib64} if it exists
 [[ ! -d /usr/local/cuda/bin ]] || export PATH="/usr/local/cuda/bin":${PATH}
 [[ ! -d /usr/local/cuda/lib ]] || export LD_LIBRARY_PATH=/usr/local/cuda/lib:${LD_LIBRARY_PATH}
