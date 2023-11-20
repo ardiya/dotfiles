@@ -41,4 +41,12 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+if vim.g.neovide then
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_antialiasing = true
+  vim.g.neovide_refresh_rate = 60
+  vim.g.neovide_no_idle = true
+  vim.g.neovide_remember_window_size = true
+end
+
 -- vim: ts=2 sts=2 sw=2 et
