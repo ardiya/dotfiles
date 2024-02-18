@@ -86,6 +86,10 @@ fi
 if [ -x "$(command -v bat)" ]; then
   alias cat='bat --theme=Dracula'
 fi
+if [ -x "$(command -v batcat)" ]; then
+  # Somehow ubuntu uses batcat instead of bat
+  alias cat='batcat --theme=Dracula'
+fi
 
 # Use difft as more superior diff if it's available
 if [ -x "$(command -v difft)" ]; then
