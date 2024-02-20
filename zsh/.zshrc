@@ -37,16 +37,6 @@ autoload -Uz run-help
 alias help=run-help
 autoload -Uz run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo run-help-svk run-help-svn
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR=vim
-else
-  export EDITOR=nvim
-fi
-# Setup default program to edit
-export VISUAL="code --wait"
-alias v="nvim"
-
 . /etc/os-release
 case "$ID" in
   # If it's Ubuntu Linux machine
