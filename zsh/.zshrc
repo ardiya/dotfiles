@@ -28,7 +28,6 @@ fi
 if [ -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
   plugins+=(zsh-autosuggestions)
 fi
-echo PLUGINS:${plugins}
 source $ZSH/oh-my-zsh.sh
 
 # fix zsh alt+H help https://wiki.archlinux.org/title/Zsh#Help_command
