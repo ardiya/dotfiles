@@ -39,7 +39,6 @@ autoload -Uz run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo
 
 . /etc/os-release
 case "$ID" in
-  # If it's Ubuntu Linux machine
   ubuntu)
     # Use ccache whenever possible to make recompilation faster
     [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache/bin":${PATH}
