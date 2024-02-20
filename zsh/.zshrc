@@ -22,6 +22,13 @@ plugins=(
   systemd
   tmux
 )
+if [ -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
+  plugins+=(zsh-syntax-highlighting)
+fi
+if [ -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+  plugins+=(zsh-autosuggestions)
+fi
+echo PLUGINS:${plugins}
 source $ZSH/oh-my-zsh.sh
 
 
