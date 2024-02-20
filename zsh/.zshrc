@@ -31,6 +31,11 @@ fi
 echo PLUGINS:${plugins}
 source $ZSH/oh-my-zsh.sh
 
+# fix zsh alt+H help https://wiki.archlinux.org/title/Zsh#Help_command
+autoload -Uz run-help
+(( ${+aliases[run-help]} )) && unalias run-help
+alias help=run-help
+autoload -Uz run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo run-help-svk run-help-svn
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
