@@ -73,18 +73,35 @@ setopt no_share_history
 # Ignore following commands in history so it doesn't get full so fast
 export HISTORY_IGNORE="(ls|ll|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|man|man *|[n,]vi[m,]|[n,]vi[m,] *)"
 
-# Use exa as more superior ls
-# if it's available
-if [ -x "$(command -v eza)" ]; then
-  alias ls='eza --color=always --group-directories-first'
-  alias ll='ls -l --git'        # Long format, git status
-  alias l='ll -a'               # Long format, all files
-  alias lr='ll -T'              # Long format, recursive as a tree
-  alias lx='ll -sextension'     # Long format, sort by extension
-  alias lk='ll -ssize'          # Long format, largest file size last
-  alias lt='ll -smodified'      # Long format, newest modification time last
-  alias lc='ll -schanged'       # Long format, newest status change (ctime) last
+# replace ls with eza/exa
+ls_params=('--icons' '--group' '--group-directories-first' '--time-style=long-iso')
+if [ -x "$(command -v exa)" ]; then
+  if exa --version | grep -q '+git'; then
+    ls_params+=('--git')
+  fi
+  alias ls='exa ${ls_params}'
+  alias la='exa -lbhHigUmuSa'
+  ls_changed=true
+elif [ -x "$(command -v eza)" ]; then
+  if [ eza--version | grep -q '+git' ]; then
+    ls_params+=('--git')
+  fi
+  alias ls='eza ${ls_params} --color-scale=all'
+  alias la='eza -lbhHigUmuSa'
+  ls_changed=true
+else
+  ls_changed=false
 fi
+if [ ${ls_changed} ]; then
+  alias lx='ls --sort=extension'
+  alias ll='ls --all --header --long'
+  alias lm='ll --sort=modified'
+  alias lk='ll --sort=size'
+  alias lt='ls --tree --level=2'
+  alias ltt='ls --tree --level=3'
+  alias tree='ls --tree'
+fi
+unset ls_changed ls_params
 
 # Use bat as more superior cat if it's available
 if [ -x "$(command -v bat)" ]; then
