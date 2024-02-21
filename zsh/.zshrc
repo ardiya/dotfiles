@@ -44,6 +44,11 @@ case "$ID" in
 
     # Use distcc whenever possible
     [[ ! -d /usr/lib/distcc ]] || export PATH="/usr/lib/distcc/bin":${PATH}
+    ;;
+  neon)
+    # Use ccache whenever possible to make recompilation faster
+    [[ ! -d /usr/lib/ccache ]] || export PATH="/usr/lib/ccache":${PATH}
+    ;;
 esac
 
 # Add .local if it exist
