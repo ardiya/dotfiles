@@ -22,12 +22,11 @@ plugins=(
   systemd
   tmux
 )
-if [ -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
-  plugins+=(zsh-syntax-highlighting)
-fi
-if [ -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
-  plugins+=(zsh-autosuggestions)
-fi
+for p in zsh-syntax-highlighting zsh-autosuggestions; do
+  if [ -d ${HOME}/.oh-my-zsh/custom/plugins/$p ]; then
+    plugins+=($p)
+  fi
+done
 source $ZSH/oh-my-zsh.sh
 
 # fix zsh alt+H help https://wiki.archlinux.org/title/Zsh#Help_command
