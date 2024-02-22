@@ -64,7 +64,47 @@ require("neodev").setup({
 })
 
 -- Enable the following language servers
-local servers = { 'rust_analyzer', 'tsserver' }
+local servers = {
+  rust_analyzer= {},
+  tsserver = {},
+  lua_ls = {
+    Lua = {
+      workspace = { checkThirdParty = false },
+      telemetry = { enable = false },
+      completion = {
+        callSnippet = "Replace"
+      },
+    },
+  },
+  -- pylsp = {
+  --   plugins = {
+  --     pycodestyle = {
+  --       ignore = { 'W391' },
+  --       maxLineLength = 120
+  --     }
+  --   }
+  -- }
+  pyright = {},
+  clangd = {},
+}
+
+-- Ensure the servers above are installed
+local mason_lspconfig = require 'mason-lspconfig'
+
+mason_lspconfig.setup {
+  ensure_installed = vim.tbl_keys(servers),
+}
+mason_lspconfig.setup_handlers {
+  function(server_name)
+    require('lspconfig')[server_name].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = servers[server_name],
+      filetypes = (servers[server_name] or {}).filetypes,
+    }
+  end,
+}
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -72,42 +112,15 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.clangd.setup {
-  cmd = {
-    "clangd",
-    "--background-index",
-    "--clang-tidy",
-    "--header-insertion=iwyu"
-  },
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.pylsp.setup {
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          ignore = { 'W391' },
-          maxLineLength = 120
-        }
-      }
-    }
-  },
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.lua_ls.setup({
-  settings = {
-    Lua = {
-      completion = {
-        callSnippet = "Replace"
-      },
-    }
-  },
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
+-- lspconfig.clangd.setup {
+--   cmd = {
+--     "clangd",
+--     "--background-index",
+--     "--clang-tidy",
+--     "--header-insertion=iwyu"
+--   },
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
 
 -- vim: ts=2 sts=2 sw=2 et
