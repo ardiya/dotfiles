@@ -20,6 +20,7 @@ plugins=(
   ripgrep
   git
   systemd
+  thefuck
   tmux
 )
 for p in zsh-syntax-highlighting zsh-autosuggestions; do
@@ -71,7 +72,7 @@ esac
 setopt no_share_history
 
 # Ignore following commands in history so it doesn't get full so fast
-export HISTORY_IGNORE="(ls|ll|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|man|man *|[n,]vi[m,]|[n,]vi[m,] *)"
+export HISTORY_IGNORE="(ls|ll|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|fuck|man|man *|[n,]vi[m,]|[n,]vi[m,] *)"
 
 # replace ls with eza/exa
 ls_params=('--icons' '--group' '--group-directories-first' '--time-style=long-iso')
