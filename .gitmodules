@@ -4,3 +4,5 @@
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+	# https://stackoverflow.com/a/70712891
+	ignore = all
