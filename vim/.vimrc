@@ -6,7 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
-    Plug 'dikiaap/minimalist'
+    Plug 'joshdick/onedark.vim'
     Plug 'luochen1990/rainbow'
     Plug 'ryanoasis/vim-devicons'
     Plug 'junegunn/fzf.vim'
@@ -16,8 +16,8 @@ call plug#end()
 
 set t_Co=256
 syntax on
-colorscheme minimalist
-let g:airline_theme='minimalist'
+colorscheme onedark
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 0
@@ -43,4 +43,3 @@ set autoindent smartindent cindent
 " Reselect visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
-
