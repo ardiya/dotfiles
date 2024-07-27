@@ -17,7 +17,6 @@ plugins=(
   autojump
   fzf
   history
-  ripgrep
   git
   systemd
   thefuck
