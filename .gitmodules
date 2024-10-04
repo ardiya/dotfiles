@@ -6,3 +6,6 @@
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 	# https://stackoverflow.com/a/70712891
 	ignore = all
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/ardiya/kickstart-modular.nvim
