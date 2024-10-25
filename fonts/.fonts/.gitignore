@@ -1,0 +1,4 @@
+# ignore everything except download.sh and .gitignore
+*
+!download.sh
+!.gitignore
